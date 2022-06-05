@@ -1,11 +1,12 @@
 package com.example.animation
 
-import androidx.appcompat.app.AppCompatActivity
+import android.content.Intent
 import android.os.Bundle
 import android.view.animation.*
 import com.example.animation.databinding.ActivityMainBinding
+import com.example.animation.ext.BaseActivity
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
     lateinit var binding: ActivityMainBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -89,6 +90,11 @@ class MainActivity : AppCompatActivity() {
 
             binding.imgAnim.startAnimation(anim)
 
+        }
+
+        binding.animationActivity.setOnClickListener {
+            val intent = Intent(this, MainActivity2::class.java)
+            startActivity(intent)
         }
     }
 }

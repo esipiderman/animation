@@ -65,6 +65,16 @@
         android:text="set"
         app:layout_constraintBottom_toBottomOf="@id/animation_rotate"
         app:layout_constraintStart_toEndOf="@id/animation_rotate"
+        app:layout_constraintEnd_toStartOf="@id/animation_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"/>
+
+    <Button
+        android:id="@+id/animation_activity"
+        android:textAllCaps="false"
+        android:text="activity"
+        app:layout_constraintBottom_toBottomOf="@id/animation_set"
+        app:layout_constraintStart_toEndOf="@id/animation_set"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"/>
